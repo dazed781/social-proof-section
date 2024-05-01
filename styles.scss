@@ -217,20 +217,25 @@ main {
         padding: 0.9rem 0;
         display: block;
         text-align: center;
-        position: static;
+        position: relative;
         animation-name: displayRating;
 
         @keyframes displayRating {
           0% {
             opacity: 0;
-            margin-top: -3rem;
+            bottom: 3rem;
           }
 
           100% {
             opacity: 1;
-            margin-bottom: 0;
+            bottom: 0;
           }
         }
+
+        &:nth-child(2),
+        &:last-child {
+            left: 0;
+          }
 
         .rating__stars {
           display: block;
@@ -252,7 +257,7 @@ main {
       @keyframes displayTestimonials {
         0% {
           opacity: 0;
-          margin-top: -3rem;
+          margin-top: -2rem;
         }
 
         100% {

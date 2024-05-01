@@ -6,8 +6,7 @@
 }
 
 body {
-  background: url(../images/bg-pattern-top-desktop.svg) no-repeat,
-    url(../images/bg-pattern-bottom-desktop.svg) no-repeat right bottom -2vh;
+  background: url(../images/bg-pattern-top-desktop.svg) no-repeat, url(../images/bg-pattern-bottom-desktop.svg) no-repeat right bottom -2vh;
   font-family: "League Spartan", sans-serif;
 }
 
@@ -147,8 +146,7 @@ main .testimonials .testimonial blockquote {
 
 @media (max-width: 920px) {
   body {
-    background: url(../images/bg-pattern-top-mobile.svg) no-repeat,
-      url(../images/bg-pattern-bottom-mobile.svg) no-repeat right bottom -2vh;
+    background: url(../images/bg-pattern-top-mobile.svg) no-repeat, url(../images/bg-pattern-bottom-mobile.svg) no-repeat right bottom -2vh;
   }
   main {
     width: 100%;
@@ -183,18 +181,21 @@ main .testimonials .testimonial blockquote {
     padding: 0.9rem 0;
     display: block;
     text-align: center;
-    position: static;
+    position: relative;
     animation-name: displayRating;
   }
   @keyframes displayRating {
     0% {
       opacity: 0;
-      margin-top: -3rem;
+      bottom: 3rem;
     }
     100% {
       opacity: 1;
-      margin-bottom: 0;
+      bottom: 0;
     }
+  }
+  main .ratings .rating:nth-child(2), main .ratings .rating:last-child {
+    left: 0;
   }
   main .ratings .rating .rating__stars {
     display: block;
@@ -212,7 +213,7 @@ main .testimonials .testimonial blockquote {
   @keyframes displayTestimonials {
     0% {
       opacity: 0;
-      margin-top: -3rem;
+      margin-top: -2rem;
     }
     100% {
       opacity: 1;
@@ -226,4 +227,4 @@ main .testimonials .testimonial blockquote {
     padding-bottom: 1.89rem;
     position: static;
   }
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
